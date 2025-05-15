@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../scripts/estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <title>Reserva de Hotel - Viajarte!</title>
+</head>
+
+<body>
+     <!-- NAVBAR -->
+ <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header-group">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="../assets/logo.png" alt="Logo" class="logo" />
+        <span class="titulo ms-2 mb-0">Viajarte!</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../scripts/destino.html">Destino</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Contacto
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" href="https://wa.me/XXXXXXXXXXX" target="_blank">
+                <img src="assets/whatsapp_vector.png" alt="WhatsApp" height="30" /> WhatsApp
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://www.instagram.com/viajarterd/" target="_blank">
+                <img src="assets/insta_vector.png" alt="Instagram" height="30" /> Instagram
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+    <div class="container py-5">
+        <h2 class="text-center">Formulario de Reserva</h2>
+
+        <!-- Formulario de reserva -->
+        <form action="procesar_reserva.php" method="post">
+            <!-- Nombre completo del huésped -->
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre Completo:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+            </div>
+            
+            <!-- Correo electrónico del huésped -->
+            <div class="mb-3">
+                <label for="email" class="form-label">Correo Electrónico:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Tu correo electrónico" required>
+            </div>
+            
+            <!-- Número de teléfono -->
+            <div class="mb-3">
+                <label for="telefono" class="form-label">Número de Teléfono:</label>
+                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Tu número de teléfono" required>
+            </div>
+            
+            <!-- Fecha de llegada -->
+            <div class="mb-3">
+                <label for="fecha-llegada" class="form-label">Fecha de Llegada:</label>
+                <input type="date" class="form-control" id="fecha-llegada" name="fecha_llegada" required>
+            </div>
+            
+            <!-- Fecha de salida -->
+            <div class="mb-3">
+                <label for="fecha-salida" class="form-label">Fecha de Salida:</label>
+                <input type="date" class="form-control" id="fecha-salida" name="fecha_salida" required>
+            </div>
+            
+            <!-- Tipo de habitación -->
+            <div class="mb-3">
+                <label for="habitacion" class="form-label">Tipo de Habitación:</label>
+                <select class="form-control" id="habitacion" name="habitacion" required>
+                    <option value="individual">Individual</option>
+                    <option value="doble">Doble</option>
+                    <option value="suite">Suite</option>
+                </select>
+            </div>
+            
+            <!-- Número de personas -->
+            <div class="mb-3">
+                <label for="personas" class="form-label">Número de Personas:</label>
+                <input type="number" class="form-control" id="personas" name="personas" min="1" max="10" required>
+            </div>
+            
+            <!-- Comentarios especiales -->
+            <div class="mb-3">
+                <label for="comentarios" class="form-label">Comentarios Especiales:</label>
+                <textarea class="form-control" id="comentarios" name="comentarios" rows="4" placeholder="Escribe cualquier solicitud especial o comentario"></textarea>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Enviar Reserva</button>
+            </div>
+        </form>
+    </div>
+
+  <  <footer>
+    <div class="container">
+      <p>©2025, Viajarte!. Todos los derechos reservados.
+        (ESTA PAGINA ES SOLO UNA DEMOSTRACIÓN Y NO TIENE VALIDEZ LEGAL.<a href="../scripts/info.html">Mas Info</a>)</p>
+      </p>
+      <hr>
+      <h2 class="contactanos">¡Contáctanos!</h2>
+      <ul class="list-unstyled d-flex justify-content-center gap-4 border=top pt-3">
+        <li><a href="https://wa.me/XXXXXXXXXXX" target="_blank"><img src="../assets/whatsapp_vector.png" alt="WhatsApp" height="50"></a></li>
+        <li><a href="https://www.instagram.com/viajarterd/" target="_blank"><img src="../assets/insta_vector.png" alt="Instagram" height="50"></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+
+</html>

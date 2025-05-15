@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 100px;
+  background-color: #2986e4 !important;
+  color: #333;
+}
+
+
+/* NAV */
+nav.navbar {
+  background-color: #1a1919;
+  padding: 0.5rem 1rem; /* Reducido para que sea más chiquita */
+  border-radius: 0 0 12px 12px;
+  z-index: 1000;
+}
+
+.titulo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 40px; /* Tamaño reducido para que no se vea gigante */
+  margin-left: 10px;
+  color: white;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* Agrupación del logo y toggler */
+.navbar-header-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Ajustes responsive opcionales */
+@media (min-width: 992px) {
+  .navbar-header-group {
+    justify-content: start;
+  }
+}
+
+
+/* HERO y PORQUE_ELEGIR */
+.hero, .porque_elegir {
+  background: rgba(0, 0, 0, 0.5);
+  color: cyan;
+  padding: 3rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+}
+
+/* Aplicando estilo similar a los demás para respetar el color cyan y fondo */
+form, .mapa, .titulo-mapa {
+  background: rgba(0, 0, 0, 0.5);
+  color: cyan;
+  padding: 3rem;
+  border-radius: 20px;
+  margin-top: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* mantengo sombra para que no pierdan estilo */
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* BTN-PRIMARY */
+.btn-primary {
+  background-color: #8bc3e9;
+  border-color: black;
+}
+
+textarea {
+  resize: none;
+}
+
+/* FOOTER */
+footer {
+  background-color: #1a1919;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
+.contactanos {
+  margin-top: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/*navbar fixews*/
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #59dbdb !important;
+}
+
+.navbar-toggler {
+  border-color: #ffffff;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
