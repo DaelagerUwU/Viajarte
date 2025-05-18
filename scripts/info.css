@@ -1,0 +1,111 @@
+/* Estilo general de la página */
+body {
+    background-color: #0d0d0d; /* Negro elegante */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina {
+    padding: 20px;
+    background: linear-gradient(180deg, #000000 0%, #1c1c1c 100%);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Integrantes */
+.integrantes h2 {
+    color: #00ccff; /* Azul brillante */
+    margin-bottom: 10px;
+}
+
+.integrantes p {
+    color: #dddddd;
+}
+
+/* Paso a paso */
+.pasoapaso {
+    text-align: left;
+    padding: 15px;
+    background-color: #222;
+    border-left: 5px solid #00ccff;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.pasoapaso ol {
+    padding-left: 20px;
+}
+
+.pasoapaso li {
+    margin-bottom: 8px;
+}
+
+/* Problemas y soluciones */
+.problemasysoluciones {
+    background-color: #2a2a2a;
+    border-left: 5px solid #ff6666;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Colores */
+.colores {
+    background-color: #4b2c2c; /* Marrón más elegante */
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #ffcc00;
+}
+
+.colores ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+/* Titulares */
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .pagina {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .pasoapaso, .problemasysoluciones, .colores {
+        font-size: 0.95rem;
+    }
+}
+
+.color-paleta {
+  list-style: none;
+  padding-left: 0;
+}
+
+.color-paleta li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.color-box {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}

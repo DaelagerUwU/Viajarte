@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Destinos-Viajarte!</title>
+  <!-- link de estilos -->
+  <link rel="stylesheet" href="estilos.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Carrusel de fondo personalizado -->
+  <div id="carouselFondo" class="carousel-fondo">
+    <img src="../assets/carusel/aurora.jpg" class="bg-image active" alt="Imagen 1" />
+    <img src="../assets/carusel/komodo.jpg" class="bg-image" alt="Imagen 2" />
+    <img src="../assets/carusel/marsella.jpg" class="bg-image" alt="Imagen 3" />
+    <img src="../assets/carusel/montana.jpg" class="bg-image" alt="Imagen 4" />
+    <img src="../assets/carusel/natural.jpg" class="bg-image" alt="Imagen 5" />
+    <img src="../assets/carusel/truenos.jpg" class="bg-image" alt="Imagen 6" />
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header-group">
+        <a class="navbar-brand d-flex align-items-center" href="../index.html">
+          <img src="../assets/logo.png" alt="Logo" class="logo" />
+          <span class="titulo ms-2 mb-0">Viajarte!</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto d-flex align-items-center gap-3">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="../scripts/destino.html">Destinos</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Contacto
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="https://wa.me/XXXXXXXXXXX" target="_blank">
+                <img src="../assets/whatsapp_vector.png" alt="WhatsApp" height="30" /> WhatsApp</a></li>
+              <li><a class="dropdown-item" href="https://www.instagram.com/viajarterd/" target="_blank">
+                <img src="../assets/insta_vector.png" alt="Instagram" height="30" /> Instagram</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-4">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <!-- Tarjeta Isla de Pascua -->
+      <div class="col">
+        <div class="card text-bg-dark mb-3 h-100">
+          <div class="row g-0 h-100">
+            <div class="col-md-4">
+              <img src="../assets/monumentos/moai.png" class="img-fluid rounded-start h-100 object-fit-cover"
+                alt="Moai Isla de Pascua" />
+            </div>
+            <div class="col-md-8 d-flex flex-column justify-content-between">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Las Islas de Pascuas</h5>
+                <p class="card-text">Si buscas un destino único, Isla de Pascua te sorprenderá con sus paisajes
+                  volcánicos, playas paradisíacas y las enigmáticas estatuas moáis. ¡Una experiencia inolvidable!</p>
+                <button class="btn btn-light btn-sm mt-auto align-self-start" onclick="mostrarToast('moai')">Ver
+                  más</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Estatua de la Libertad -->
+      <div class="col">
+        <div class="card text-bg-dark mb-3 h-100">
+          <div class="row g-0 h-100">
+            <div class="col-md-4">
+              <img src="../assets/monumentos/Estatua-Libertad.png" class="img-fluid rounded-start h-100 object-fit-cover"
+                alt="Estatua de la Libertad" />
+            </div>
+            <div class="col-md-8 d-flex flex-column justify-content-between">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">La Estatua de la Libertad</h5>
+                <p class="card-text">Si visitas Nueva York, no te pierdas la Estatua de la Libertad: un ícono mundial de
+                  libertad y uno de los monumentos más emblemáticos de Estados Unidos.</p>
+                <button class="btn btn-light btn-sm mt-auto align-self-start" onclick="mostrarToast('libertad')">Ver
+                  más</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Coliseo Romano -->
+      <div class="col">
+        <div class="card text-bg-dark mb-3 h-100">
+          <div class="row g-0 h-100">
+            <div class="col-md-4">
+              <img src="../assets/monumentos/Coliseo-romano.jpg" class="img-fluid rounded-start h-100 object-fit-cover"
+                alt="Coliseo Romano"/>
+            </div>
+            <div class="col-md-8 d-flex flex-column justify-content-between">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">El Coliseo Romano</h5>
+                <p class="card-text">Si vas a Roma, no dejes de visitar el Coliseo: una maravilla del mundo antiguo y el anfiteatro más famoso del planeta.</p>
+                <button class="btn btn-light btn-sm mt-auto align-self-start" onclick="mostrarToast('romano')">Ver
+                  más</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Muralla China -->
+      <div class="col">
+        <div class="card text-bg-dark mb-3 h-100">
+          <div class="row g-0 h-100">
+            <div class="col-md-4">
+              <img src="../assets/monumentos/Muralla-china.jpg" class="img-fluid rounded-start h-100 object-fit-cover"
+                alt="Muralla-china"/>
+            </div>
+            <div class="col-md-8 d-flex flex-column justify-content-between">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">La Muralla China</h5>
+                <p class="card-text">
+                  Si viajas a China, no te pierdas la Gran Muralla: una de las maravillas del mundo y una experiencia inolvidable entre historia y paisajes asombrosos.
+                </p>
+                <button class="btn btn-light btn-sm mt-auto align-self-start" onclick="mostrarToast('china')">Ver más</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Toast Overlay -->
+    <div id="toast-overlay" class="toast-overlay" onclick="ocultarToast(event)">
+      <!-- Toast tarjeta 1 Isla de Pascuas -->
+      <div id="toast-moai" class="toast toast-custom text-bg-dark border-0 position-relative" role="alert"
+        onclick="event.stopPropagation()">
+        <button type="button" class="btn-close btn-close-white" onclick="ocultarToast()" aria-label="Cerrar"></button>
+        <div>
+          <div class="toast-header">Isla de Pascua</div>
+          <img src="../assets/paisajes/isla-de-pascuas.png" alt="Moai Isla de Pascua" />
+          <div class="toast-body">
+            <div>
+              Si lo que buscas es una escapada única que combine historia, naturaleza y cultura, Isla de Pascua es el
+              lugar ideal. Ubicada en pleno océano Pacífico, esta isla chilena te cautivará con su mística, sus paisajes
+              de volcanes y costas escarpadas, además de las famosas estatuas moáis, símbolos de la antigua civilización
+              Rapa Nui. Aquí podrás disfrutar de tranquilos días en playas vírgenes, explorar vestigios arqueológicos y
+              vivir una experiencia única en un rincón remoto del mundo. Sin duda, una aventura que te dejará recuerdos
+              imborrables.
+            </div>
+          </div>
+          <button class="btn btn-primary w-100 mt-3"><a href="../scripts/form.html">Reservar Ahora</a></button>
+        </div>
+      </div>
+
+      <!-- Toast tarjeta 2 Estatua de la Libertad -->
+      <div id="toast-libertad" class="toast toast-custom text-bg-dark border-0 position-relative" role="alert"
+        onclick="event.stopPropagation()">
+        <button type="button" class="btn-close btn-close-white" onclick="ocultarToast()" aria-label="Cerrar"></button>
+        <div>
+          <div class="toast-header">Estatua de la Libertad</div>
+          <img src="../assets/paisajes/New-york.jpeg" alt="Estatua de la Libertad" />
+          <div class="toast-body">
+            <div>
+              La Estatua de la Libertad, ubicada en Nueva York, es uno de los monumentos más reconocidos del mundo y un
+              símbolo universal de libertad. Fue un regalo de Francia en 1886 y recibe a los visitantes con su antorcha en
+              alto desde Liberty Island, en la entrada del puerto.
+              Visitarla es una experiencia imperdible si estás en la ciudad: puedes tomar un ferry desde Manhattan,
+              disfrutar de vistas panorámicas del skyline y conocer su historia en el museo del pedestal. Ideal para
+              quienes quieren empaparse del espíritu de Nueva York y llevarse una foto inolvidable.
+            </div>
+          </div>
+          <button class="btn btn-primary w-100 mt-3"><a href="../scripts/form.html">Reservar Ahora</a></button>
+        </div>
+      </div>
+
+      <!-- Toast tarjeta 3 Coliseo Romano -->
+      <div id="toast-romano" class="toast toast-custom text-bg-dark border-0 position-relative" role="alert"
+        onclick="event.stopPropagation()">
+        <button type="button" class="btn-close btn-close-white" onclick="ocultarToast()" aria-label="Cerrar"></button>
+        <div>
+          <div class="toast-header">Coliseo Romano</div>
+          <img src="../assets/paisajes/Ciudad-roma.jpg" alt="Coliseo-romano" />
+          <div class="toast-body">
+            <div>
+              El Coliseo es una visita obligada en Roma, la “Ciudad Eterna”, famosa por sus ruinas, plazas y vibrante cultura. Este icónico anfiteatro, inaugurado en el año 80 d.C., fue escenario de combates de gladiadores y grandes espectáculos del Imperio Romano. Hoy puedes recorrer sus gradas y túneles, y disfrutar del entorno histórico que lo rodea, como el Foro Romano y el monte Palatino. Una experiencia que te transporta al pasado en pleno corazón de una ciudad fascinante.
+            </div>
+          </div>
+          <button class="btn btn-primary w-100 mt-3"><a href="../scripts/form.html">Reservar Ahora</a></button>
+        </div>
+      </div>
+
+      <!-- Toast tarjeta 4 Muralla China -->
+      <div id="toast-china" class="toast toast-custom text-bg-dark border-0 position-relative" role="alert"
+        onclick="event.stopPropagation()">
+        <button type="button" class="btn-close btn-close-white" onclick="ocultarToast()" aria-label="Cerrar"></button>
+        <div>
+          <div class="toast-header">La Muralla China</div>
+          <img src="../assets/paisajes/la-muralla.jpg" alt="Muralla-china" />
+          <div class="toast-body">
+            <div>
+              La Gran Muralla China no es solo un muro, es una de las obras más impresionantes jamás construidas por el ser humano. Se extiende por más de 21.000 kilómetros atravesando montañas, desiertos y valles, y fue levantada durante siglos para proteger al Imperio Chino de invasiones.
+              Puedes visitarla desde Pekín, donde tramos como Badaling o Mutianyu están restaurados y listos para recibir viajeros. Caminar por sus empinadas escaleras, con vistas panorámicas espectaculares, es una experiencia única que combina aventura, cultura y asombro ante la magnitud de la historia china. Ideal para quienes buscan algo épico en su viaje.
+            </div>
+          </div>
+          <button class="btn btn-primary w-100 mt-3"><a href="../scripts/form.html">Reservar Ahora</a></button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>©2025, Viajarte!. Todos los derechos reservados.
+        (ESTA PAGINA ES SOLO UNA DEMOSTRACIÓN Y NO TIENE VALIDEZ LEGAL. <a href="/scripts/info.html">Mas Info</a>)
+      </p>
+      <hr />
+      <h2 class="contactanos">¡Contáctanos!</h2>
+      <ul class="list-unstyled d-flex justify-content-center gap-4">
+        <li><a href="https://wa.me/XXXXXXXXXXX" target="_blank"><img src="../assets/whatsapp_vector.png" alt="WhatsApp" height="50" /></a></li>
+        <li><a href="https://www.instagram.com/viajarterd/" target="_blank"><img src="../assets/insta_vector.png" alt="Instagram" height="50" /></a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Scrip para mostrar los toats de las tarjetas -->
+  <script>
+    function mostrarToast(id) {
+      const overlay = document.getElementById('toast-overlay');
+      overlay.classList.add('show');
+      // Ocultar todos los toasts
+      document.querySelectorAll('#toast-overlay .toast').forEach(toast => toast.style.display = 'none');
+      // Mostrar el toast solicitado
+      document.getElementById(`toast-${id}`).style.display = 'block';
+    }
+
+    function ocultarToast(event) {
+      if (!event || event.target.id === 'toast-overlay') {
+        document.getElementById('toast-overlay').classList.remove('show');
+      }
+    }
+  </script>
+
+  <!-- Scrip para el carusel del fondo -->
+  <script>
+  const images = document.querySelectorAll('.bg-image');
+  let current = 0;
+
+  setInterval(() => 
+  {
+    const currentImage = images[current];
+    const nextImage = images[(current + 1) % images.length];
+
+    // Lleva imagen actual al fondo
+    currentImage.classList.remove('active');
+    nextImage.classList.add('active');
+
+    current = (current + 1) % images.length;
+  },5000); // cambia cada 5 segundos
+</script>
+</body>
+</html>
