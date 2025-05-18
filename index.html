@@ -128,6 +128,139 @@
         (ESTA PAGINA ES SOLO UNA DEMOSTRACIÓN Y NO TIENE VALIDEZ LEGAL.<a href="scripts/info.html">Mas Info</a>)</p>
       </p>
       <hr>
+        <footer class="footer-feedback">
+  <h2>¡Dejá tu amorcito por Viajarte! 💕</h2>
+
+  <div class="like-section">
+    <button onclick="darLike()">❤️ Me gusta</button>
+    <span id="likeCount">0</span> likes
+  </div>
+
+  <div class="rating-section">
+    <label for="rating">Clasificá esta página: ⭐</label>
+    <select id="rating" onchange="guardarRating()">
+      <option value="1">⭐</option>
+      <option value="2">⭐⭐</option>
+      <option value="3">⭐⭐⭐</option>
+      <option value="4">⭐⭐⭐⭐</option>
+      <option value="5">⭐⭐⭐⭐⭐</option>
+    </select>
+    <p>Valoración guardada: <span id="savedRating">0</span> ⭐</p>
+  </div>
+
+  <div class="comment-section">
+    <h3>Dejá tu comentario:</h3>
+    <textarea id="comentario" rows="3" placeholder="Escribí algo lindo..."></textarea><br>
+    <button onclick="publicarComentario()">Publicar</button>
+
+    <h4>Comentarios:</h4>
+    <ul id="comentariosGuardados"></ul>
+  </div>
+
+  <style>
+    .footer-feedback {
+      background-color: #121212;
+      color: white;
+      padding: 30px;
+      text-align: center;
+      border-top: 2px solid #ff4081;
+      margin-top: 50px;
+    }
+
+    .footer-feedback button {
+      background-color: #ff4081;
+      border: none;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: transform 0.2s ease;
+    }
+
+    .footer-feedback button:hover {
+      transform: scale(1.1);
+    }
+
+    .footer-feedback textarea {
+      width: 90%;
+      max-width: 500px;
+      padding: 8px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-top: 10px;
+      resize: none;
+    }
+
+    .footer-feedback select {
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: none;
+      margin-top: 10px;
+    }
+
+    .footer-feedback ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .footer-feedback li {
+      background-color: #333;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+    }
+  </style>
+
+  <script>
+    // Likes
+    let likes = localStorage.getItem("likes") || 0;
+    document.getElementById("likeCount").textContent = likes;
+
+    function darLike() {
+      likes++;
+      localStorage.setItem("likes", likes);
+      document.getElementById("likeCount").textContent = likes;
+    }
+
+    // Clasificación
+    let ratingGuardado = localStorage.getItem("rating") || 0;
+    document.getElementById("savedRating").textContent = ratingGuardado;
+    document.getElementById("rating").value = ratingGuardado;
+
+    function guardarRating() {
+      let rating = document.getElementById("rating").value;
+      localStorage.setItem("rating", rating);
+      document.getElementById("savedRating").textContent = rating;
+    }
+
+    // Comentarios
+    let comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+    const ulComentarios = document.getElementById("comentariosGuardados");
+
+    function mostrarComentarios() {
+      ulComentarios.innerHTML = "";
+      comentarios.forEach(com => {
+        let li = document.createElement("li");
+        li.textContent = com;
+        ulComentarios.appendChild(li);
+      });
+    }
+
+    function publicarComentario() {
+      const texto = document.getElementById("comentario").value.trim();
+      if (texto !== "") {
+        comentarios.push(texto);
+        localStorage.setItem("comentarios", JSON.stringify(comentarios));
+        document.getElementById("comentario").value = "";
+        mostrarComentarios();
+      }
+    }
+
+    mostrarComentarios(); // Mostrar al cargar
+  </script>
+      <hr>
       <h2 class="contactanos">¡Contáctanos!</h2>
       <ul class="list-unstyled d-flex justify-content-center gap-4 border=top pt-3">
         <li><a href="https://wa.me/XXXXXXXXXXX" target="_blank"><img src="assets/whatsapp_vector.png" alt="WhatsApp" height="50"></a></li>
