@@ -11,29 +11,15 @@ body {
 }
 
 
-/* NAV */
+/* NAVBAR */
 nav.navbar {
   background-color: #1a1919;
-  padding: 0.5rem 1rem; /* Reducido para que sea más chiquita */
+  padding: 0.5rem 1rem;
   border-radius: 0 0 12px 12px;
-  z-index: 1000;
-  position: fixed !important;
+  z-index: 1030;
+  position: relative;
 }
 
-.titulo {
-  font-family: 'Dancing Script', cursive;
-  font-size: 40px; /* Tamaño reducido para que no se vea gigante */
-  margin-left: 10px;
-  color: white;
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-/* Agrupación del logo y toggler */
 .navbar-header-group {
   display: flex;
   align-items: center;
@@ -41,11 +27,45 @@ nav.navbar {
   width: 100%;
 }
 
-/* Ajustes responsive opcionales */
 @media (min-width: 992px) {
   .navbar-header-group {
-    justify-content: start;
+    justify-content: flex-start;
   }
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.titulo {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5rem;
+  margin-left: 10px;
+  color: white;
+  white-space: nowrap;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #59dbdb !important;
+  text-decoration: none;
+}
+
+.navbar-toggler {
+  border-color: #ffffff;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 
@@ -97,21 +117,4 @@ footer {
 ul {
   list-style: none;
   padding: 0;
-}
-
-/*navbar fixews*/
-.navbar-nav .nav-link {
-  color: white !important;
-}
-
-.navbar-nav .nav-link:hover {
-  color: #59dbdb !important;
-}
-
-.navbar-toggler {
-  border-color: #ffffff;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }

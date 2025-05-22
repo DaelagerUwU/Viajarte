@@ -111,6 +111,7 @@ footer ul li a:focus {
   z-index: 1055;
   padding: 1rem;
   overflow-y: auto;
+  
 }
 
 .toast-overlay.show {
